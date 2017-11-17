@@ -1,0 +1,150 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>
+		Registro de talleres
+		</title>
+		<!-- Meta -->
+		<meta charset="utf-8">
+		<meta name="robots" content="noindex, noarchive">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<!-- estilos externos CSS, fuente: https://www.w3schools.com/bootstrap/-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+
+	<body id="public">
+		<div id="header" class="jumbotron text-center">
+			<h2 class="">Registro de talleres</h2>
+			<div class="">Regístrese ahora mientras hay lugares disponibles.</div>
+		</div>
+		<div id="container" class="container">
+
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">Formulario con estilo</h3>
+					</div>
+					<form id="formulario" name="formulario" class="panel-body" accept-charset="UTF-8" autocomplete="off"
+					enctype="multipart/form-data" method="post" novalidate="" action="">
+						<div class="row">
+							<div class="col-sm-8">
+
+					<ul class="list-group">
+					<li id="nombre-apellido" class="list-group-item">
+
+						<div class="form-group">
+							<label for="nombre">Nombre</label>
+							<input id="nombre" name="Field1" class="form-control" value="" size="15" tabindex="1" onkeyup="handleInput(this);"
+								onchange="handleInput(this);" placeholder="ej: Maria" required="" type="text">
+						</div>
+						<div class="form-group">
+							<label for="apellidos">Apellidos</label>
+							<input id="apellidos" name="Field2" class="form-control" value="" size="15" tabindex="2" onkeyup="handleInput(this);"
+								onchange="handleInput(this);" placeholder="ej: Zambrano Sánchez" required="" type="text">
+						</div>
+					</li>
+
+
+					<li id="direcciones" class="list-group-item">
+						<div class="form-group">
+							<label for="correo">Correo electrónico</label>
+							<input id="correo" name="Field11" class="form-control" value="" size="15" tabindex="3" onkeyup="handleInput(this);"
+									onchange="handleInput(this);" placeholder="asd@mimail.com" required="" type="email">
+						</div>
+						<div class="form-group">
+							<label for="dirección">Dirección</label>
+							<input id="dirección" name="Field11" class="form-control" value="" size="15" tabindex="4" onkeyup="handleInput(this);"
+								   onchange="handleInput(this);" placeholder="10 de agosto y la que cruza" required="" type="text">
+						</div>
+
+					</li>
+
+
+					<li id="cedulas" class="list-group-item">
+
+						<div class="form-group">
+							<label for="nacionalidad">Nacionalidad</label>
+							<input id="nacionalidad" name="Field5" class="form-control" value="" tabindex="5" onkeyup="handleInput(this);"
+								   onchange="handleInput(this);" placeholder="ej: curazaleño" required="" type="text">
+						</div>
+						<div class="form-group">
+							<label for="cedula">Cédula</label>
+							<input id="cedula" name="Field5" class="form-control" value="" tabindex="6" onkeyup="handleInput(this);"
+								   onchange="handleInput(this);" placeholder="ej: curazaleño" required="" type="text">
+						</div>
+					</li>
+
+					<li id="talleres" class="list-group-item">
+						<div class="form-group">
+							<label for="selec01" >Seleccione talleres (Ctrl / Cmd⌘)</label>
+							<select id="selec01" name="taller" class="form-control" multiple> <!--tabindex="7" onclick="handleInput(this);"
+									onkeyup="handleInput(this);" -->
+								<option value="taller 1" >
+									Cerámica
+								</option>
+								<option value="taller 2">
+									Cocina
+								</option>
+								<option value="taller 3">
+									Orfebrería
+								</option>
+								<option value="taller 4">
+									Agricultura
+								</option>
+								<option value="taller 5">
+									Percepción Extrasensorial
+								</option>
+							</select>
+
+
+
+						<div class="form-group">
+							<label for="selec02">Seleccione un curso:</label>
+							<select id="selec02" name="cursos" class="form-control" tabindex="8" onclick="handleInput(this);"
+									onkeyup="handleInput(this);" >
+								<option value="curso 1" selected="selected">
+									Francés
+								</option>
+								<option value="curso 2">
+									Primeros Auxilios
+								</option>
+								<option value="curso 3">
+									Finanzas
+								</option>
+								<option value="curso 4">
+									Vexilología militar
+								</option>
+								<option value="curso 5">
+									Criptografía cuántica
+								</option>
+							</select>
+						</div>
+					</li>
+
+					</ul>
+							</div>
+			</div><!-- row-->
+				<p>
+					<button id="saveForm" name="mandar" class="btn btn-lg btn-success" onmousedown="doSubmitEvents();" type="button">Enviar</button>
+				</p>
+			</form>
+
+			</div><!-- panel-->
+
+		</div><!-- container-->
+
+
+
+		<!-- JavaScript -->
+
+		<script>
+		__RULES = [];
+		__ENTRY = [];
+		__PRICES = null;
+		__FORM_LIMIT = 20;
+		</script>
+	</body>
+</html>
