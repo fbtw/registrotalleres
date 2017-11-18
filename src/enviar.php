@@ -10,7 +10,7 @@ $Cedula= $_POST['f6'];
 $Talleres= $_POST['f7'];
 $Curso= $_POST['f8'];
 
-//(Nombre,Apellido,Correo,Direccion,Nacionalidad,Cedula,Talleres,Curso)
+
 $sql = "INSERT INTO asistente 
 VALUES ('$Nombre', '$Apellido','$Correo','$Direccion','$Nacionalidad','$Cedula','$Talleres','$Curso')";
 if ($db->query($sql) === TRUE) {

@@ -5,8 +5,6 @@ $query = "SELECT * FROM asistente;";
 $result= $db->query($query);
 
 
-
-
 ?>
 
 <!DOCTYPE html>
@@ -27,14 +25,26 @@ $result= $db->query($query);
 
 <body id="public">
 <div id="header" class="jumbotron text-center">
-    <h2 class="">Registro de talleres</h2>
-    <div class="">Formulario de registro</div>
+    <h1 class="">Talleres y cursos UTPL</h1>
+    <h3 class="">Ingeniería web 2017</h3>
 </div>
+
 <div id="container" class="container">
+    <div class="row thumbnail text-center">
+        <div class="col-sm-6">
+            <h2>Ponencias</h2>
+            <img src="https://pbs.twimg.com/media/DOR1dlKWsAEXNxK.jpg" class="img-fluid" alt="Responsive image" height="400"/>
+        </div>
+        <div class="col-sm-6">
+            <h2>Expositores</h2>
+            <?php include('carrusel.html'); ?>
+        </div>
+    </div>
+    <div class="row" >
     <div class="col-sm-8">
     <div class="panel panel-primary">
         <div class="panel-heading">
-            <h3 class="panel-title">Formulario con estilo</h3>
+            <h3 class="panel-title">Formulario registro de talleres</h3>
         </div>
         <form id="formulario" name="formulario" class="panel-body" accept-charset="UTF-8" autocomplete="off"
               enctype="multipart/form-data" method="post" novalidate="" action="enviar.php">
@@ -45,15 +55,15 @@ $result= $db->query($query);
                             <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="nombre">Nombre</label>
-                                <input id="nombre" name="f1" class="form-control" value="" size="15" tabindex="1" onkeyup="handleInput(this);"
-                                       onchange="handleInput(this);" placeholder="ej: Maria" required="" type="text">
+                                <input id="nombre" name="f1" class="form-control" value="" size="15" tabindex="1"
+                                       placeholder="ej: Maria" required="" type="text">
                             </div>
                             </div>
                             <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="apellidos">Apellidos</label>
-                                <input id="apellidos" name="f2" class="form-control" value="" size="15" tabindex="2" onkeyup="handleInput(this);"
-                                       onchange="handleInput(this);" placeholder="ej: Zambrano Sánchez" required="" type="text">
+                                <input id="apellidos" name="f2" class="form-control" value="" size="15" tabindex="2"
+                                       placeholder="ej: Zambrano Sánchez" required="" type="text">
                             </div>
                             </div>
                             </div>
@@ -65,15 +75,15 @@ $result= $db->query($query);
                                 <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="correo">Correo electrónico</label>
-                                <input id="correo" name="f3" class="form-control" value="" size="15" tabindex="3" onkeyup="handleInput(this);"
-                                       onchange="handleInput(this);" placeholder="asd@mimail.com" required="" type="email">
+                                <input id="correo" name="f3" class="form-control" value="" size="15" tabindex="3"
+                                       placeholder="asd@mimail.com" required="" type="email">
                             </div>
                                 </div>
                                 <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="dirección">Dirección</label>
-                                <input id="dirección" name="f4" class="form-control" value="" size="15" tabindex="4" onkeyup="handleInput(this);"
-                                       onchange="handleInput(this);" placeholder="10 de agosto y la que cruza" required="" type="text">
+                                <input id="dirección" name="f4" class="form-control" value="" size="15" tabindex="4"
+                                        placeholder="10 de agosto y la que cruza" required="" type="text">
                             </div>
                                 </div>
                             </div>
@@ -85,15 +95,15 @@ $result= $db->query($query);
                                 <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="nacionalidad">Nacionalidad</label>
-                                <input id="nacionalidad" name="f5" class="form-control" value="" tabindex="5" onkeyup="handleInput(this);"
-                                       onchange="handleInput(this);" placeholder="ej: curazaleño" required="" type="text">
+                                <input id="nacionalidad" name="f5" class="form-control" value="" tabindex="5"
+                                       placeholder="ej: curazaleño" required="" type="text">
                             </div>
                                 </div>
                                 <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="cedula">Cédula</label>
-                                <input id="cedula" name="f6" class="form-control" value="" tabindex="6" onkeyup="handleInput(this);"
-                                       onchange="handleInput(this);" placeholder="012345678-9" required="" type="text">
+                                <input id="cedula" name="f6" class="form-control" value="" tabindex="6"
+                                       placeholder="012345678-9" required="" type="text">
                             </div>
                                 </div>
                             </div>
@@ -105,7 +115,7 @@ $result= $db->query($query);
                             <div class="form-group">
                                 <label for="selec01" >Seleccione talleres (Ctrl / Cmd⌘)</label>
                                 <select id="selec01" name="f7" class="form-control" multiple> <!--tabindex="7" onclick="handleInput(this);"
-									onkeyup="handleInput(this);" -->
+									 " -->
                                     <option value="Ceramica" >
                                         Cerámica
                                     </option>
@@ -127,8 +137,7 @@ $result= $db->query($query);
                                     <div class="col-sm-6">
                                 <div class="form-group">
                                     <label for="selec02">Seleccione un curso:</label>
-                                    <select id="selec02" name="f8" class="form-control" tabindex="8" onclick="handleInput(this);"
-                                            onkeyup="handleInput(this);" >
+                                    <select id="selec02" name="f8" class="form-control" tabindex="8" >
                                         <option value="Frances" selected="selected">
                                             Francés
                                         </option>
@@ -153,12 +162,12 @@ $result= $db->query($query);
                     </ul>
 
             <p>
-                <button id="saveForm" name="mandar" class="btn btn-lg btn-success" onmousedown="doSubmitEvents();" type="submit">Enviar</button>
+                <button id="saveForm" name="mandar" class="btn btn-lg btn-success" type="submit">Enviar</button>
             </p>
         </form>
 
     </div><!-- panel-->
-
+        <h2 class="text-center" >Inscritos</h2>
     <table class="table">
         <thead>
         <tr>
@@ -195,22 +204,22 @@ $result= $db->query($query);
         </tbody>
     </table>
     </div>
+
+        <div class="col-sm-4">
+            <h2 class="text-center" >Agenda</h2>
+            <?php include('agenda.html'); ?>
+        </div>
+
+    </div>
 </div><!-- container-->
 
-
-
-<!-- JavaScript -->
-
-<script>
-    __RULES = [];
-    __ENTRY = [];
-    __PRICES = null;
-    __FORM_LIMIT = 20;
-</script>
+    <footer class="footer">
+        <div class="container">
+            <h3>
+             <span class="text-muted">Felipe Borja Pérez</span>
+            </h3>
+        </div>
+    </footer>
 </body>
 </html>
 
-<?php
-//header( 'Location: /index.html' ) ;
-
-?>
